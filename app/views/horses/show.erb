@@ -1,5 +1,4 @@
 <a href='/horses'>Home</a>
 
-<h3>Horse: <%= @horse.name %></h3>
-<h5>Breed: <%= @horse.breed %><h5>
-<h5>Age: <%= @horse.age %><h5>
+<h3>Horse: <%= horse.name %></h3>
+<%= erb :"horses/_show", locals: {horse: @horse} %>

@@ -1,0 +1,23 @@
+<h2>Create your new Horse!</h2>
+
+<div class="errors">
+  <% if horse.errors %>
+    <% horse.errors.full_messages.each do |error| %>
+      <ul><%= error %></ul>
+    <% end %>
+  <% end %>
+</div>
+
+<form id="horse-form" method="post" action="/horses">
+
+  <label for="horse[name]">Name</label>
+  <input type="text" name="horse[name]" value="<%= horse.name %>">
+
+  <label for="horse[name]">Age</label>
+  <input type="text" name="horse[age]" value="<%= horse.age %>">
+
+  <label for="horse[name]">Breed</label>
+  <input type="text" name="horse[breed]" value="<%= horse.breed %>">
+  <input type="submit" value="CREATE">
+
+</form>
